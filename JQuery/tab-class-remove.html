@@ -1,0 +1,64 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.js"></script> 
+<link rel="stylesheet" type="text/css" href="/css/result-light.css">
+<style type="text/css">
+.mcategory-toggle {cursor: pointer;}
+.msub-categories {display: none;}
+.msub-categories.default {display: block;}
+.mcategory-toggle.active { color:red; }
+</style>
+<title></title>
+<script type="text/javascript">
+//<![CDATA[
+$(window).load(function(){
+  $(document).ready(function($) {
+  				$('.mobile-categories').find('.mcategory-toggle').click(function(){
+
+            var self = $(this);
+
+  		    //Expand or collapse this panel
+  			self.next().slideToggle('fast');
+
+            //Remove class for all element, except the current selected item
+            $('.mcategory-toggle').not(self).removeClass('active');
+
+            //Toggle active class for the current element
+            self.toggleClass('active');
+
+  			//Hide the other panels
+  		     $(".msub-categories").not(self.next()).slideUp('fast');
+
+  		});
+  });
+});
+//]]> 
+
+</script> 
+</head>
+
+<body>
+  <div class="mobile-categories">
+    <h4 class="mcategory-toggle">Vehicles</h4>
+    <ul class="msub-categories" style="display: none;">
+        <li>Option 1</li>
+        <li>Option 2</li>
+        <li>Option 3</li>
+    </ul>
+    <h4 class="mcategory-toggle">Education</h4>
+    <ul class="msub-categories" style="display: none;">
+        <li>Option 10</li>
+        <li>Option 20</li>
+        <li>Option 30</li>
+    </ul>
+    <h4 class="mcategory-toggle">Shops</h4>
+    <ul class="msub-categories" style="display: none;">
+        <li>Option 14</li>
+        <li>Option 25</li>
+        <li>Option 36</li>
+    </ul>
+</div>
+</body>
+</html>
